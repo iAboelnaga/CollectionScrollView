@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="HowItWorkVC" customModule="prospeirty" customModuleProvider="target">
+            <connections>
+                <outlet property="howItWorksCollection" destination="uE2-Lx-dnM" id="fsK-b4-K5J"/>
+                <outlet property="nextButton" destination="wtK-Cc-IyI" id="aJ6-fi-7ma"/>
+                <outlet property="pageController" destination="FVp-DL-Bch" id="UPO-TZ-8Wo"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" bounces="NO" pagingEnabled="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" bouncesZoom="NO" dataMode="none" prefetchingEnabled="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uE2-Lx-dnM">
+                    <rect key="frame" x="0.0" y="183" width="414" height="444"/>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="444" id="Mrg-Xl-ft5"/>
+                    </constraints>
+                    <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="0.0" minimumInteritemSpacing="0.0" id="3eq-Er-v7h">
+                        <size key="itemSize" width="128" height="128"/>
+                        <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                        <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                        <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                    </collectionViewFlowLayout>
+                </collectionView>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vlB-fr-JCI">
+                    <rect key="frame" x="20" y="64" width="35" height="35"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="35" id="7aE-nC-Kvl"/>
+                        <constraint firstAttribute="width" constant="35" id="Kws-l9-Mbn"/>
+                    </constraints>
+                    <state key="normal" title=""/>
+                    <buttonConfiguration key="configuration" style="plain" image="close-icon"/>
+                    <connections>
+                        <action selector="closeButtonTapped:" destination="-1" eventType="touchUpInside" id="ubv-Wi-LnM"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wtK-Cc-IyI">
+                    <rect key="frame" x="89.5" y="722.5" width="235" height="45"/>
+                    <color key="backgroundColor" red="0.10980392156862745" green="0.11764705882352941" blue="0.14509803921568626" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="45" id="0en-Hs-tdc"/>
+                        <constraint firstAttribute="width" constant="235" id="4Rk-aC-pZn"/>
+                    </constraints>
+                    <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <state key="normal" title="Button"/>
+                    <buttonConfiguration key="configuration" style="plain" title="Next"/>
+                    <connections>
+                        <action selector="nextButttonTapped:" destination="-1" eventType="touchUpInside" id="Gpy-CC-luK"/>
+                    </connections>
+                </button>
+                <pageControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="6" translatesAutoresizingMaskIntoConstraints="NO" id="FVp-DL-Bch">
+                    <rect key="frame" x="149" y="805" width="116" height="26"/>
+                    <color key="pageIndicatorTintColor" systemColor="systemGray2Color"/>
+                    <color key="currentPageIndicatorTintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                </pageControl>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+            <constraints>
+                <constraint firstItem="uE2-Lx-dnM" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="0Ak-NM-zHx"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="uE2-Lx-dnM" secondAttribute="trailing" id="16l-C3-2ed"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="FVp-DL-Bch" secondAttribute="bottom" constant="31" id="5qZ-i7-AFG"/>
+                <constraint firstItem="wtK-Cc-IyI" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="89.5" id="6RQ-Wc-WDP"/>
+                <constraint firstItem="FVp-DL-Bch" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="149" id="Fkn-Vn-wYL"/>
+                <constraint firstItem="vlB-fr-JCI" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="20" id="Kwb-Pp-YBQ"/>
+                <constraint firstItem="wtK-Cc-IyI" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="X2N-vt-aVs"/>
+                <constraint firstItem="uE2-Lx-dnM" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="139" id="YYc-29-T0k"/>
+                <constraint firstItem="FVp-DL-Bch" firstAttribute="top" secondItem="wtK-Cc-IyI" secondAttribute="bottom" constant="37.5" id="bR1-81-aEm"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="FVp-DL-Bch" secondAttribute="trailing" constant="149" id="fxj-j7-ff6"/>
+                <constraint firstItem="wtK-Cc-IyI" firstAttribute="top" secondItem="uE2-Lx-dnM" secondAttribute="bottom" constant="95.5" id="moJ-sF-6Zo"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="wtK-Cc-IyI" secondAttribute="trailing" constant="89.5" id="xDx-1f-fJe"/>
+                <constraint firstItem="vlB-fr-JCI" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="20" id="xyn-mQ-Hun"/>
+            </constraints>
+            <point key="canvasLocation" x="137.68115942028987" y="109.82142857142857"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="close-icon" width="32" height="32"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemGray2Color">
+            <color red="0.68235294117647061" green="0.68235294117647061" blue="0.69803921568627447" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>
